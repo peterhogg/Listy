@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity
         navigationView.getMenu().add("Set Budget").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
+                Log.d("Item Clicked", "Add Recipe");
+                Intent intent = new Intent(MainActivity.this, SetBudgetActivity.class);
+                startActivity(intent);
                 return false;
             }
         });;

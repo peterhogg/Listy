@@ -21,6 +21,10 @@
         <activity
             android:name=".AddRecipeActivity"
             android:label="@string/title_activity_add_recipe"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SetBudgetActivity"
+            android:label="@string/title_activity_set_budget"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
