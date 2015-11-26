@@ -25,6 +25,10 @@
         <activity
             android:name=".SetBudgetActivity"
             android:label="@string/title_activity_set_budget"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FindStoreActivity"
+            android:label="@string/title_activity_find_store"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

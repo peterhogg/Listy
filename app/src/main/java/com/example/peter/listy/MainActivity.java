@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity
         navigationView.getMenu().add("Add Recipe").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                Log.d("Item Clicked", "Add Recipe");
                 Intent intent = new Intent(MainActivity.this, AddRecipeActivity.class);
                 startActivity(intent);
                 return false;
@@ -48,7 +47,6 @@ public class MainActivity extends AppCompatActivity
         navigationView.getMenu().add("Set Budget").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                Log.d("Item Clicked", "Add Recipe");
                 Intent intent = new Intent(MainActivity.this, SetBudgetActivity.class);
                 startActivity(intent);
                 return false;
@@ -57,6 +55,8 @@ public class MainActivity extends AppCompatActivity
         navigationView.getMenu().add("Find Location").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
+                Intent intent = new Intent(MainActivity.this, FindStoreActivity.class);
+                startActivity(intent);
                 return false;
             }
         });;

@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:text="Weekly"
         android:id="@+id/button3"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/button2"
         android:layout_alignStart="@+id/button4" />
 
     <Button
@@ -45,7 +45,6 @@
         android:layout_height="wrap_content"
         android:text="Monthly"
         android:id="@+id/button4"
-        android:layout_marginTop="41dp"
         android:layout_below="@+id/button3"
         android:layout_centerHorizontal="true" />
 
@@ -54,7 +53,7 @@
         android:layout_height="wrap_content"
         android:text="Set"
         android:id="@+id/button5"
-        android:layout_below="@+id/button4"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="39dp" />
+        android:layout_marginBottom="54dp" />
 </RelativeLayout>
