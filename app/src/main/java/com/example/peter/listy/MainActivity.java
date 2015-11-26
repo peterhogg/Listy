@@ -72,6 +72,8 @@ public class MainActivity extends AppCompatActivity
         navigationView.getMenu().add("Clear All").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
+                your_array_list.clear();
+                lv.invalidateViews();
                 return false;
             }
         });
