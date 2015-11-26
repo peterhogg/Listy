@@ -16,10 +16,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ActionMenuView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    public ListView lv;
+    public List<String> your_array_list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +73,31 @@ public class MainActivity extends AppCompatActivity
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 return false;
+            }
+        });
+
+
+        lv = (ListView) findViewById(R.id.listView);
+
+        your_array_list = new ArrayList<String>();
+        your_array_list.add("Apples $2.50");
+        your_array_list.add("Bannanas $1.50");
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_list_item_1,
+                your_array_list );
+
+        lv.setAdapter(arrayAdapter);
+
+        Button addBtn = (Button) findViewById(R.id.button10);
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText et = (EditText)findViewById(R.id.textView);
+                String newItem = et.getText().toString();
+                your_array_list.add(your_array_list.size(), newItem + " $XX.xx");
+                lv.invalidateViews();
+
             }
         });
 
